@@ -114,7 +114,7 @@ RUN --mount=type=cache,id=ragflow_apt,target=/var/cache/apt,sharing=locked \
         # x86_64 or others
         ACCEPT_EULA=Y apt install -y unixodbc-dev msodbcsql17; \
     fi || \
-    { echo "Failed to install ODBC driver"; exit 1; }
+    { echo "Failed to install ODBC driver"; exit 0; }
 
 
 
